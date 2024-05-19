@@ -8,11 +8,16 @@ const user = new mongoose.Schema({
         type: String
     },
     email: {
-        type: String
+        type: String,
+        unique: true
     },
     identificationNumber: {
         type: Number,
+        unique: true,
         length: 11
+    },
+    tez: {
+        type: Buffer
     }
 })
 
